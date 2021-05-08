@@ -15,7 +15,7 @@ class ReservableByStaffsTest < ApplicationSystemTestCase
     click_on "New Reservable By Staff"
 
     fill_in "End time", with: @reservable_by_staff.end_time
-    fill_in "Filled flat", with: @reservable_by_staff.filled_flat
+    fill_in "Filled flag", with: @reservable_by_staff.filled_flag
     fill_in "Staff", with: @reservable_by_staff.staff_id
     fill_in "Start time", with: @reservable_by_staff.start_time
     fill_in "The date", with: @reservable_by_staff.the_date
@@ -30,7 +30,7 @@ class ReservableByStaffsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "End time", with: @reservable_by_staff.end_time
-    fill_in "Filled flat", with: @reservable_by_staff.filled_flat
+    fill_in "Filled flag", with: @reservable_by_staff.filled_flag
     fill_in "Staff", with: @reservable_by_staff.staff_id
     fill_in "Start time", with: @reservable_by_staff.start_time
     fill_in "The date", with: @reservable_by_staff.the_date

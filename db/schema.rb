@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_08_091710) do
+ActiveRecord::Schema.define(version: 2021_05_08_231854) do
 
   create_table "reservable_by_staffs", force: :cascade do |t|
     t.date "the_date"
-    t.time "start_time"
-    t.time "end_time"
+    t.string "start_time"
+    t.string "end_time"
     t.integer "staff_id", null: false
     t.integer "filled_flag", default: 0
     t.datetime "created_at", precision: 6, null: false

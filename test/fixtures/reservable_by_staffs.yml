@@ -1,15 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  the_date: 2021-05-08
-  start_time: 2021-05-08 18:17:10
-  end_time: 2021-05-08 18:17:10
+  the_date: 2021-05-09
+  start_time: MyString
+  end_time: MyString
   staff: one
-  filled_flat: 1
+  filled_flag: 1
 
 two:
-  the_date: 2021-05-08
-  start_time: 2021-05-08 18:17:10
-  end_time: 2021-05-08 18:17:10
+  the_date: 2021-05-09
+  start_time: MyString
+  end_time: MyString
   staff: two
-  filled_flat: 1
+  filled_flag: 1
