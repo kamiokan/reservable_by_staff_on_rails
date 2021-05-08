@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>The date:</strong>
+  <%= @reservable_by_staff.the_date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @reservable_by_staff.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @reservable_by_staff.end_time %>
+</p>
+
+<p>
+  <strong>Staff:</strong>
+  <%= @reservable_by_staff.staff.name %>
+</p>
+
+<p>
+  <strong>Filled flag:</strong>
+  <%= @reservable_by_staff.filled_flag %>
+</p>
+
+<%= link_to 'Edit', edit_reservable_by_staff_path(@reservable_by_staff) %> |
+<%= link_to 'Back', reservable_by_staffs_path %>

@@ -1,0 +1,42 @@
+<%= form_with(model: reservable_by_staff) do |form| %>
+  <% if reservable_by_staff.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reservable_by_staff.errors.count, "error") %> prohibited this reservable_by_staff from being saved:</h2>
+
+      <ul>
+        <% reservable_by_staff.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :the_date %>
+    <%= form.date_select :the_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_time %>
+    <%= form.time_select :start_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_time %>
+    <%= form.time_select :end_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :staff_id %>
+    <%= form.collection_select :staff_id, Staff.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :filled_flag %>
+    <%= form.number_field :filled_flag %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

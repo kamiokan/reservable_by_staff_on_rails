@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_08_082527) do
+ActiveRecord::Schema.define(version: 2021_05_08_091710) do
+
+  create_table "reservable_by_staffs", force: :cascade do |t|
+    t.date "the_date"
+    t.time "start_time"
+    t.time "end_time"
+    t.integer "staff_id", null: false
+    t.integer "filled_flag", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["staff_id"], name: "index_reservable_by_staffs_on_staff_id"
+  end
 
   create_table "staffs", force: :cascade do |t|
     t.string "name"
@@ -19,4 +30,5 @@ ActiveRecord::Schema.define(version: 2021_05_08_082527) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "reservable_by_staffs", "staffs"
 end
